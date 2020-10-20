@@ -1,0 +1,20 @@
+﻿<h3>Default <Anchor href="#" appearance="lightweight" style="vertical-align: middle;">Show Code</Anchor></h3> 
+<EditForm Model="model" OnValidSubmit="HandleValidSubmit">
+    <Switch @bind-Value="model.IsChecked">
+        <span>Switch</span>
+        <div slot="checked-message">Light</div>
+        <div slot="unchecked-message">Dark</div>
+    </Switch>
+</EditForm>
+
+@code{
+    private EditModel model = new EditModel();
+    public class EditModel
+    {
+        public bool IsChecked { get; set; } = true;
+    }
+    private void HandleValidSubmit()
+    {
+        Console.WriteLine($"Value of the model is: {model.IsChecked}");
+    }
+}

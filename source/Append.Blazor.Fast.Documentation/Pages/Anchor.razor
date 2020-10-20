@@ -1,0 +1,30 @@
+﻿@page "/components/anchor"
+<ComponentPage Component="typeof(Append.Blazor.Fast.Components.Anchor)">
+    <Information>
+        <h2 id="overview">Overview</h2>
+        <p>The anchor component represent an control that should invoke an action or perform a navigation.</p>
+        <h3 id="use-cases">Use Cases</h3>
+        <ul>
+            <li>Creating simple button or link elements</li>
+        </ul>
+        <h3 id="non-goals">Non-goals</h3>
+        <ul>
+            <li>Complex or composite buttons (like split button)</li>
+            <li>
+                Inline &quot;hypertext&quot; anchor<ul>
+                    <li>This component will expose a base class that a &quot;hypertext&quot; component can leverage, but the component itself is not in the scope of the button.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3 id="features">Features</h3>
+        <ul>
+            <li>Can represent either a hyperlink or a button</li>
+            <li>
+                Appearances including &quot;lightweight&quot;, &quot;justified&quot;, &quot;outline&quot;, &quot;primary&quot; and &quot;stealth&quot;<ul>
+                    <li>I&#39;m proposing dropping &quot;justified&quot; because this is a simple matter of removing starting padding.</li>
+                </ul>
+            </li>
+        </ul>
+
+    </Information>
+</ComponentPage>

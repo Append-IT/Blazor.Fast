@@ -1,0 +1,39 @@
+﻿<h1>@Component.Name</h1>
+@Information
+<Divider />
+<h2>Examples</h2>
+<Tabs style="padding:8px;">
+    <Tab>Fast Dark</Tab>
+    <Tab>Fast Light</Tab>
+    <Tab>Fluent</Tab>
+    <TabPanel style="background-color:#3B3B3B">
+        <SystemProvider Theme="new ThemeProvider(ThemeType.Fast)" background-color="#3B3B3B">
+            @foreach (var example in _examples)
+            {
+                <p>
+                    @BuildExample(example)
+                </p>
+            }
+        </SystemProvider>
+    </TabPanel>
+    <TabPanel style="background-color:#FFF">
+        <SystemProvider Theme="new ThemeProvider(ThemeType.Fast)" background-color="#FFF">
+            @foreach (var example in _examples)
+            {
+                <p>
+                    @BuildExample(example)
+                </p>
+            }
+        </SystemProvider>
+    </TabPanel>
+    <TabPanel style="background-color:#FFF">
+        <SystemProvider Theme="new ThemeProvider(ThemeType.Fluent)" background-color="#FFF">
+            @foreach (var example in _examples)
+            {
+                <p>
+                    @BuildExample(example)
+                </p>
+            }
+        </SystemProvider>
+    </TabPanel>
+</Tabs>

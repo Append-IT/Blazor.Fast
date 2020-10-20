@@ -1,0 +1,17 @@
+﻿<h3>Default <Badge>bug</Badge></h3>
+<EditForm Model="model" OnValidSubmit="HandleValidSubmit">
+    <Checkbox @bind-Value="model.IsChecked">Checkbox</Checkbox>
+    <Button type="submit" appearance="primary">Submit</Button>
+</EditForm>
+
+@code{
+    private EditModel model = new EditModel();
+    public class EditModel
+    {
+        public bool IsChecked { get; set; } = true;
+    }
+    private void HandleValidSubmit()
+    {
+        Console.WriteLine($"Value of the model is: {model.IsChecked}");
+    }
+}
