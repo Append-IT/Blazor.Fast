@@ -1,4 +1,11 @@
-﻿<h1>@Component.Name</h1>
+﻿<div style="display:flex;justify-content:space-between;align-items:center;">
+    <h1>@Component.Name</h1>
+    <Anchor href=@($"https://github.com/Append-IT/Blazor.Fast/blob/master/source/Append.Blazor.Fast.Documentation/Pages/{Component.Name}.index.razor")
+            target="_blank"
+            appearance="lightweight">
+        Edit this page
+    </Anchor>
+</div>
 @Information
 <Divider />
 <h2>Examples</h2>
@@ -6,33 +13,36 @@
     <Tab>Fast Dark</Tab>
     <Tab>Fast Light</Tab>
     <Tab>Fluent</Tab>
-    <TabPanel style="background-color:#3B3B3B">
-        <SystemProvider Theme="new ThemeProvider(ThemeType.Fast)" background-color="#3B3B3B">
+    <TabPanel style="background-color:#3B3B3B;">
+        <SystemProvider Theme="new ThemeProvider(ThemeType.Fast)" background-color="#3B3B3B" style="width: 100%">
             @foreach (var example in _examples)
             {
-                <p>
-                    @BuildExample(example)
-                </p>
+            <p>
+                @BuildExample(example)
+            </p>
+            <Divider />
             }
         </SystemProvider>
     </TabPanel>
-    <TabPanel style="background-color:#FFF">
-        <SystemProvider Theme="new ThemeProvider(ThemeType.Fast)" background-color="#FFF">
+    <TabPanel style="background-color:#FFF;">
+        <SystemProvider Theme="new ThemeProvider(ThemeType.Fast)" background-color="#FFF" style="width: 100%">
             @foreach (var example in _examples)
             {
                 <p>
                     @BuildExample(example)
                 </p>
+                <Divider />
             }
         </SystemProvider>
     </TabPanel>
-    <TabPanel style="background-color:#FFF">
-        <SystemProvider Theme="new ThemeProvider(ThemeType.Fluent)" background-color="#FFF">
+    <TabPanel style="background-color:#FFF;">
+        <SystemProvider Theme="new ThemeProvider(ThemeType.Fluent)" background-color="#FFF" style="width: 100%">
             @foreach (var example in _examples)
             {
                 <p>
                     @BuildExample(example)
                 </p>
+                <Divider />
             }
         </SystemProvider>
     </TabPanel>

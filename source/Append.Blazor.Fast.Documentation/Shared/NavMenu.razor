@@ -1,8 +1,9 @@
 ﻿@inject NavigationManager NavigationManager
 <Treeview>
+    <NavComponent ChildComponent="typeof(TreeItem)" href="" Match="NavLinkMatch.All">Introduction</NavComponent>
+    <NavComponent ChildComponent="typeof(TreeItem)" href="getting-started">Getting Started</NavComponent>
     <TreeItem expanded>
         Components
-        <NavComponent ChildComponent="typeof(TreeItem)" href="" Match="NavLinkMatch.All">Home</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/accordion">Accordion</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/anchor">Anchor</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/badge">Badge</NavComponent>
