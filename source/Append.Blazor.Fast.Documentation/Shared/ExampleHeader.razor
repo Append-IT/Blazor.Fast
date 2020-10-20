@@ -1,0 +1,14 @@
+﻿<h3>
+    @Example.Name
+<Anchor href=@($"https://github.com/Append-IT/Blazor.Fast/blob/master/source/Append.Blazor.Fast.Documentation/Examples/{Component.Name}/{Example.Name}.razor")
+        target="_blank"
+        appearance="lightweight"
+        style="vertical-align: middle;">
+    Show Code
+</Anchor>
+</h3>
+
+@code {
+    [Parameter] public Type Component { get; set; }
+    [Parameter] public Type Example { get; set; }
+}

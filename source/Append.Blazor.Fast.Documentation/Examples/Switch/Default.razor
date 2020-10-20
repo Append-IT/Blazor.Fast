@@ -1,8 +1,10 @@
-﻿<ComponentHeader Title="Default"
-                 ExampleUrl="https://github.com/Append-IT/Blazor.Fast/blob/master/source/Append.Blazor.Fast.Documentation/Examples/Checkbox/1.razor" />
+﻿<ComponentHeader Component="typeof(Switch)" Example="@GetType()" />
 <EditForm Model="model" OnValidSubmit="HandleValidSubmit">
-    <Checkbox @bind-Value="model.IsChecked">Checkbox</Checkbox>
-    <Button type="submit" appearance="primary">Submit</Button>
+    <Switch @bind-Value="model.IsChecked">
+        <span>Switch</span>
+        <div slot="checked-message">Light</div>
+        <div slot="unchecked-message">Dark</div>
+    </Switch>
 </EditForm>
 
 @code{
