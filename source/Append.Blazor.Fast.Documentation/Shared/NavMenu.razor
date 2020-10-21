@@ -25,14 +25,15 @@
     </TreeItem>
     <TreeItem @onclick="ToggleFormComponents" expanded=@(areFormComponentsShown ? "true" : null)>
         Form Components
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/textfield">Text Field</NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/textarea">Text Area</NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/numberfield">Number Field</NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/datefield">Date Field</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/checkbox">Checkbox <Badge>Bug</Badge></NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/switch">Switch <Badge>Bug</Badge></NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/radio">Radio <Badge>Bug</Badge></NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/radio-group">Radio Group</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/slider">Slider</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" href="components/switch">Switch <Badge>Bug</Badge></NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" href="components/textarea">Text Area</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" href="components/textfield">Text Field</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" href="components/numberfield">Number Field</NavComponent>
     </TreeItem>
 </Treeview>
 
