@@ -2,7 +2,7 @@
 <Treeview>
     <NavComponent ChildComponent="typeof(TreeItem)" href="" Match="NavLinkMatch.All">Introduction</NavComponent>
     <NavComponent ChildComponent="typeof(TreeItem)" href="getting-started">Getting Started</NavComponent>
-    <TreeItem expanded>
+    <TreeItem>
         Basic Components
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/accordion">Accordion</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/anchor">Anchor</NavComponent>
@@ -31,13 +31,14 @@
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/slider">Slider</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/switch">Switch <Badge>Bug</Badge></NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/textarea">Text Area</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/text-field">Text Field</NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/textfield">Text Field</NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/numberfield">Number Field</NavComponent>
     </TreeItem>
 </Treeview>
 
 @code{
     private bool isProgressShown;
     private void ToggleProgress() => isProgressShown = !isProgressShown;
-    private bool areFormComponentsShown;
+    private bool areFormComponentsShown = true;
     private void ToggleFormComponents() => areFormComponentsShown = !areFormComponentsShown;
 }

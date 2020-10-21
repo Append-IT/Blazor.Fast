@@ -6,15 +6,15 @@ using System.Diagnostics.CodeAnalysis;
 namespace Append.Blazor.Fast.Components
 {
     /// <summary>
-    /// A multiline input component for editing <see cref="string"/> values.
-    /// @bind-Value:event="oninput" is currently not possible due to: https://github.com/dotnet/aspnetcore/issues/11960
+    /// An implementation of a generic input for textual values as a form-connected web-component.
+    /// @bind-value:event="oninput" is currently not possible due to: https://github.com/dotnet/aspnetcore/issues/11960
     /// </summary>
-    public class TextArea : FastInputComponent<string?>
+    public class TextField : FastInputComponent<string>
     {
         /// <inheritdoc />
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
-            builder.OpenElement(0, $"{ThemeName}-text-area");
+            builder.OpenElement(0, $"{ThemeName}-text-field");
             builder.AddMultipleAttributes(1, AdditionalAttributes);
             builder.AddAttribute(3, "class", CssClass);
             builder.AddAttribute(4, "value", BindConverter.FormatValue(CurrentValue));
