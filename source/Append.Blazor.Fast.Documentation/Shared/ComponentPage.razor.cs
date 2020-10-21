@@ -38,9 +38,7 @@ namespace Append.Blazor.Fast.Documentation.Shared
         private void GetAllExamplesForComponent(string componentName)
         {
             var namespaceOfTheExamples = $"Append.Blazor.Fast.Documentation.Examples.{componentName}";
-            Console.WriteLine(componentName);
             _examples = GetTypesInNamespace(Assembly.GetExecutingAssembly(), namespaceOfTheExamples);
-            Console.WriteLine(_examples.Count());
         }
         private RenderFragment BuildExample(Type example) => builder =>
         {
