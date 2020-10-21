@@ -1,0 +1,33 @@
+﻿@page "/components/progress"
+<ComponentPage Component="typeof(Append.Blazor.Fast.Components.Progress)">
+    <Information>
+        <h2 id="overview">Overview</h2>
+        <p><em>Progress</em> and <em>progress ring</em> are used to display the length of time a process will take or to visualize percentage value (referred to as a <strong>determinate</strong> state) and to represent an unspecified wait time (referred to as an <strong>indeterminate</strong> state). <em>Progress</em> components are typically visually represented by a circular or linear animation. When the <code>value</code> attribute is passed the state is <strong>determinate</strong>, otherwise it is <strong>indeterminate</strong>.</p>
+        <h3 id="use-cases">Use Cases</h3>
+        <ul>
+            <li>
+                <p>Jim is building a dashboard to track fulfillment for his online store, he uses progress ring to visualize various metrics.</p>
+            </li>
+            <li>
+                <p>Susan is downloading a large collection of music onto her hard-drive. She sees a linear progress displaying the percentage complete for the currently downloading song and indeterminate linear progress for those songs in queue.</p>
+            </li>
+            <li>
+                <p>Fin is scrolling a large list of continuously loading data as he scrolls he sees a indeterminate progress ring to let him know that data is loading.</p>
+            </li>
+        </ul>
+        <h3 id="types">Types</h3>
+        <p><em>Progress</em> can be visually represented in 2 ways.</p>
+        <ul>
+            <li>Linear - A straight horizontal line. <code>Progress</code></li>
+            <li>Circular - A circular ring shape. <code>ProgressRing</code></li>
+        </ul>
+        <h3 id="features">Features</h3>
+        <p>A progress should allow the following attributes:</p>
+        <ul>
+            <li><code>value</code>, the value of the progress, if not passed the progress will be put into its &quot;indeterminate&quot; state.</li>
+            <li><code>min</code>, the minimum value.</li>
+            <li><code>max</code>, the maximum value.</li>
+            <li><code>paused</code>, whether the progress is paused or not.</li>
+        </ul>
+    </Information>
+</ComponentPage>

@@ -1,0 +1,8 @@
+﻿<ExampleHeader Component="typeof(Progress)" Example="@GetType()" />
+<Progress paused="@(isPaused ? true : null)"></Progress>
+<Button @onclick="TogglePaused" appearance="accent">@(isPaused ? "Continue" : "Pause")</Button>
+
+@code{
+    private bool isPaused = false;
+    private void TogglePaused() => isPaused = !isPaused;
+}

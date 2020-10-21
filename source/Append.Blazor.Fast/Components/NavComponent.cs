@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.AspNetCore.Components.Routing;
+using Microsoft.AspNetCore.Components.Web;
 using System;
 using System.Collections.Generic;
 
@@ -140,10 +141,11 @@ namespace Append.Blazor.Fast.Components
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
             builder.OpenComponent(0, ChildComponent);
-            builder.AddMultipleAttributes(1, AdditionalAttributes);
-            builder.AddAttribute(2, "onclick", new Action(() => Navigate()));
-            builder.AddAttribute(3, "selected", _isActive);
-            builder.AddAttribute(4, "ChildContent",ChildContent);
+            builder.AddEventStopPropagationAttribute(1, "onclick", true); // for child trees, can be overriden.
+            builder.AddMultipleAttributes(2, AdditionalAttributes);
+            builder.AddAttribute(3, "onclick", new Action(() => Navigate()));
+            builder.AddAttribute(4, "selected", _isActive);
+            builder.AddAttribute(5, "ChildContent",ChildContent);
             builder.CloseComponent();
         }
         private void Navigate()

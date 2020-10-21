@@ -1,0 +1,10 @@
+﻿<ExampleHeader Component="typeof(Progress)" Example="@GetType()" />
+<Progress id="indicator" min="0" max="100" value="@count"></Progress>
+<Button @onclick="Subtract">Subtract (10)</Button>
+<Button @onclick="Add" appearance="accent">Add (10)</Button>
+<p>Current Count is @count</p>
+@code{
+    private int count = 50;
+    private void Add() => count += 10;
+    private void Subtract() => count -= 10;
+}

@@ -1,0 +1,8 @@
+﻿<ExampleHeader Component="typeof(ProgressRing)" Example="@GetType()" />
+<ProgressRing paused="@(isPaused ? true : null)"></ProgressRing>
+<Button @onclick="TogglePaused" appearance="accent">@(isPaused ? "Continue" : "Pause")</Button>
+
+@code{
+    private bool isPaused = false;
+    private void TogglePaused() => isPaused = !isPaused;
+}

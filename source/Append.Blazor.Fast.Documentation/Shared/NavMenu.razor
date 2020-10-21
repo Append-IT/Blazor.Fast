@@ -14,8 +14,11 @@
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/divider">Divider</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/flipper">Flipper</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/menu">Menu</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/progress-ring">Progress Ring</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/progress">Progress</NavComponent>
+        <TreeItem @onclick="ToggleProgress" expanded=@(isProgressShown ? "true" : null)>
+            Progress
+            <NavComponent ChildComponent="typeof(TreeItem)" href="components/progress-ring" Match="NavLinkMatch.All">Ring</NavComponent>
+            <NavComponent ChildComponent="typeof(TreeItem)" href="components/progress" Match="NavLinkMatch.All">Linear</NavComponent>
+        </TreeItem>
         <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/radio">Radio</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/radio-group">Radio Group</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/skeleton">Skeleton</NavComponent>
@@ -28,3 +31,8 @@
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/treeview">Tree View</NavComponent>
     </TreeItem>
 </Treeview>
+
+@code{
+    private bool isProgressShown = true;
+    private void ToggleProgress() => isProgressShown = !isProgressShown;
+}
