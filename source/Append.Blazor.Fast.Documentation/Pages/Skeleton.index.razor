@@ -1,0 +1,20 @@
+﻿@page "/components/skeleton"
+<ComponentPage Component="typeof(Append.Blazor.Fast.Components.Skeleton)">
+    <Information>
+        <h2 id="overview">Overview</h2>
+        <p>A skeleton is used as a visual placeholder for an element while it is in a loading state and usually presents itself as a simplified wireframe-like version of the UI it is representing.</p>
+        <h3 id="use-cases">Use Cases</h3>
+        <p>Used to give users a sense of loading progress activity rather than merely presenting a blank page or container.</p>
+        <h3 id="non-goals">Non-goals</h3>
+        <h4 id="specfic-skeletons">Specfic Skeletons</h4>
+        <p>Should not be made to reflect a specific element (e.g. <code>skeleton-button</code>, <code>skeleton-text</code>, <code>skeleton-heading</code>, etc...). The skeleton should be as generic of a container as possible to represent various elements of different shapes and sizes.</p>
+        <h3 id="features">Features</h3>
+        <h4 id="patterns">Patterns</h4>
+        <p>This feature allows a <code>fast-skeleton</code> component to accept a source for a skeleton &quot;pattern&quot; through the <code>pattern</code> attribute or an inline SVG code via the component&#39;s slot. A skeleton pattern may be used to represent a transparent graphical shape and layout of a component.</p>
+        <p>When used in this way the skeleton component would essentially act as a container for the provided SVG mask which can then be applied anywhere in an application.</p>
+        <p>The SVG would have CSS mask properties applied to it allowing underlying colors and effects (i.e. <Anchor appearance="hypertext" href="https://developer.microsoft.com/en-us/fluentui#/controls/web/shimmer">shimmer</Anchor>) to be visible through the transparent template.</p>
+        <p>This feature allows the <code>fast-skeleton</code> component to provide maximum design flexibility to represent many shapes and layouts.</p>
+        <h4 id="shape-attribute">Shape Attribute</h4>
+        <p>A <code>circle</code> or <code>rect</code> (rectangle) shape can be selected. The <code>border-radius</code> of the <code>rect</code> shape will be determined by the design system.</p>
+    </Information>
+</ComponentPage>
