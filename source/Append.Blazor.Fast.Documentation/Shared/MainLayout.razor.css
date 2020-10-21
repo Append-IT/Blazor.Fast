@@ -4,6 +4,7 @@
     grid-template-columns: 300px 1fr 300px;
     grid-template-rows: auto 1fr auto;
     grid-gap: 10px;
+    min-height: calc(100vh - 16px);
     padding:8px;
 }
 
