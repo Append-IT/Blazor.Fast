@@ -3,13 +3,12 @@
     <NavComponent ChildComponent="typeof(TreeItem)" href="" Match="NavLinkMatch.All">Introduction</NavComponent>
     <NavComponent ChildComponent="typeof(TreeItem)" href="getting-started">Getting Started</NavComponent>
     <TreeItem expanded>
-        Components
+        Basic Components
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/accordion">Accordion</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/anchor">Anchor</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/badge">Badge</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/button">Button</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/card">Card</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" href="components/checkbox">Checkbox <Badge>Bug</Badge></NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/dialog">Dialog</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/divider">Divider</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/flipper">Flipper</NavComponent>
@@ -19,20 +18,26 @@
             <NavComponent ChildComponent="typeof(TreeItem)" href="components/progress-ring" Match="NavLinkMatch.All">Ring</NavComponent>
             <NavComponent ChildComponent="typeof(TreeItem)" href="components/progress" Match="NavLinkMatch.All">Linear</NavComponent>
         </TreeItem>
-        <NavComponent ChildComponent="typeof(TreeItem)" href="components/radio">Radio <Badge>Bug</Badge></NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/radio-group">Radio Group</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/skeleton">Skeleton</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/slider">Slider</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" href="components/switch">Switch <Badge>Bug</Badge></NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/tabs">Tabs</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/text-area">Text Area</NavComponent>
-        <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/text-field">Text Field</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/tooltip">Tooltip</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/treeview">Tree View</NavComponent>
+    </TreeItem>
+    <TreeItem @onclick="ToggleFormComponents" expanded=@(areFormComponentsShown ? "true" : null)>
+        Form Components
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/checkbox">Checkbox <Badge>Bug</Badge></NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/radio">Radio <Badge>Bug</Badge></NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/radio-group">Radio Group</NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/slider">Slider</NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/switch">Switch <Badge>Bug</Badge></NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/text-area">Text Area</NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" disabled href="components/text-field">Text Field</NavComponent>
     </TreeItem>
 </Treeview>
 
 @code{
-    private bool isProgressShown = true;
+    private bool isProgressShown;
     private void ToggleProgress() => isProgressShown = !isProgressShown;
+    private bool areFormComponentsShown;
+    private void ToggleFormComponents() => areFormComponentsShown = !areFormComponentsShown;
 }
