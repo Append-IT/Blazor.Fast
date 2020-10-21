@@ -13,7 +13,7 @@ namespace Append.Blazor.Fast.Components
     /// Note that if the slider is in vertical orientation by default the component will get a height using the css var --fast-slider-height, by default that equates to (10px * var(--thumb-size)) or 160px. 
     /// Inline style will override that height.
     /// </summary>
-    public class Slider<TValue> : FastInputComponent<TValue>
+    public partial class Slider<TValue> : FastInputComponent<TValue>
     {
         private static string _defaultOrientation = "horizontal";
         private readonly static string _stepAttributeValue; // Null by default, so only allows whole numbers as per HTML spec
@@ -49,10 +49,11 @@ namespace Append.Blazor.Fast.Components
             builder.OpenElement(0, $"{ThemeName}-slider");
             builder.AddAttribute(1, "step", _stepAttributeValue);
             builder.AddMultipleAttributes(2, AdditionalAttributes);
-            builder.AddAttribute(3, "class", SliderCssClass);
-            builder.AddAttribute(4, "value", BindConverter.FormatValue(CurrentValueAsString));
-            builder.AddAttribute(5, "onchange", EventCallback.Factory.CreateBinder<string?>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
-            builder.AddContent(6, ChildContent);
+            builder.AddAttribute(4, "role", "slider");
+            builder.AddAttribute(5, "class", SliderCssClass);
+            builder.AddAttribute(6, "value", BindConverter.FormatValue(CurrentValueAsString));
+            builder.AddAttribute(7, "onchange", EventCallback.Factory.CreateBinder<string?>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
+            builder.AddContent(8, ChildContent);
             builder.CloseElement();
         }
 
