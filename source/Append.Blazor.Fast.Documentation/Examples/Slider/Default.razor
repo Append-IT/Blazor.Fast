@@ -1,0 +1,18 @@
+﻿<ExampleHeader Component="typeof(Slider<int>)" Example="@GetType()" />
+
+<EditForm Model="model" OnValidSubmit="HandleValidSubmit">
+    <Slider min="0" max="100" step="10" @bind-Value="model.Amount"></Slider>
+</EditForm>
+<p>The current value is: @model.Amount</p>
+
+@code{
+    private EditModel model = new EditModel();
+    public class EditModel
+    {
+        public int Amount { get; set; } = 70;
+    }
+    private void HandleValidSubmit()
+    {
+        Console.WriteLine($"Value of the model is: {model.Amount}");
+    }
+}

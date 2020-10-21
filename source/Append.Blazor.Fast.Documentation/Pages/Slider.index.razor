@@ -1,0 +1,42 @@
+﻿@page "/components/slider"
+<ComponentPage Component="typeof(Append.Blazor.Fast.Components.Slider<int>)">
+    <Information>
+        <h2 id="overview">Overview</h2>
+        <p>The <code>slider</code> component allows the user to move one or two <code>thumb</code> elements along a vertical or horizontal axis to select a value or range. <code>slider</code> is also considered an input field and must work within a <code>&lt;form&gt;</code> as other input fields do.</p>
+        <h3 id="background">Background</h3>
+        <p>There is a standard input for sliders, <code>&lt;input type=&quot;range&quot;/&gt;</code>, but it doesn&#39;t support the full level of detail, styling, etc that most design systems need or require. For this reason a hidden input is created to support form input operations but not visible. For context please see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">MDN Docs</a> and <a href="https://caniuse.com/#search=datalist">caniuse</a>.</p>
+        <h3 id="use-cases">Use Cases</h3>
+        <ul>
+            <li>
+                <p>
+                    <em>A customer using the component on a web page.</em>
+                    On a web page the customer drags the slider from min to max values ultimately setting the value of the component to a value constrained by step and min and max values.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <em>A developer building an app with the component and interacting through HTML/CSS/JavaScript.</em>
+                    A developer can inject labels on the slider into the default slot, if they use <code>slider-label</code> elements those will be styled a specific way internally and any part of that style can be overridden. Styles and items intending to be placed in the default slot can be replaced as needed.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <em>A designer customizing the component.</em>
+                    A designer can override any internal styling applied to the slotted labels, the track, the progress track and the thumb(s) if appropriate.
+                </p>
+            </li>
+        </ul>
+        <h3 id="features">Features</h3>
+        <ul>
+            <li>Implement your own thumb UI, default provided</li>
+            <li>Implement your own slider track and progress track UI, default provided</li>
+            <li>Handle the <code>slider</code>&#39;s <code>change</code> callback to be notified when the value has changed.</li>
+            <li>Customize the tick marks along the track</li>
+            <li>Include slider in form based operations</li>
+            <li>
+                Utilize <code>mode</code> attribute to allow the slider to operate in different configurations, <code>single-value</code>, <code>range</code>, <code>adjust-from-lower</code> and <code>adjust-from-upper</code>.
+                <em>*proposing that for the initial spec we start with supporting <code>single-value</code> only.</em>
+            </li>
+        </ul>
+    </Information>
+</ComponentPage>

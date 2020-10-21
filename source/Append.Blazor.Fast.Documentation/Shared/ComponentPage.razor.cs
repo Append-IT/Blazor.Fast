@@ -10,14 +10,23 @@ namespace Append.Blazor.Fast.Documentation.Shared
     public partial class ComponentPage
     {
         private IEnumerable<Type> _examples = new List<Type>();
+        private string _componentName;
         [Parameter] public Type Component { get; set; }
         [Parameter] public RenderFragment Information { get; set; }
 
         protected override void OnInitialized()
         {
             base.OnInitialized();
-            GetAllExamplesForComponent(Component.Name);
+            _componentName = GetNameWithoutGenericArity(Component);
+            GetAllExamplesForComponent(_componentName);
         }
+        public static string GetNameWithoutGenericArity(Type t)
+        {
+            string name = t.Name;
+            int index = name.IndexOf('`');
+            return index == -1 ? name : name.Substring(0, index);
+        }
+
         private static Type[] GetTypesInNamespace(Assembly assembly, string nameSpace)
         {
             return
@@ -29,7 +38,9 @@ namespace Append.Blazor.Fast.Documentation.Shared
         private void GetAllExamplesForComponent(string componentName)
         {
             var namespaceOfTheExamples = $"Append.Blazor.Fast.Documentation.Examples.{componentName}";
+            Console.WriteLine(componentName);
             _examples = GetTypesInNamespace(Assembly.GetExecutingAssembly(), namespaceOfTheExamples);
+            Console.WriteLine(_examples.Count());
         }
         private RenderFragment BuildExample(Type example) => builder =>
         {
