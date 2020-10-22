@@ -53,7 +53,7 @@ You can install from NuGet using the following command:
 ```
 4. Use a component on the `index.razor` page
 ```razor
-<Button appearance="primary">Click Me</Button>
+<Button appearance="accent">Click Me</Button>
 ```
 
 ### Further reading
