@@ -4,10 +4,11 @@ A **tiny** wrapper around [Fast](https://www.fast.design/) and [Fluent](https://
 ![Nuget](https://img.shields.io/nuget/v/append.blazor.fast?style=flat-square)
 
 ## The blogpost
-You can read more about why we did this in [this blog post](https://benjaminvertonghen.medium.com/blazor-fast-webcomponents-4bae55d005ad).
+You can read more about why and how we did this in [this blog post](https://benjaminvertonghen.medium.com/blazor-fast-webcomponents-4bae55d005ad).
 
 ### Documentation and examples
-We just have to put the docs online, but there are samples in the documnetation project. 
+- The documentation and examples of Blazor.Fast can be found [here](https://tinyurl.com/yxjuzolo)
+- The official documentation of FAST by Microsoft can be found [here](https://www.fast.design/docs/introduction/)
 
 ### Installing
 
