@@ -1,8 +1,8 @@
 ﻿@inject NavigationManager NavigationManager
 <Treeview>
-    <NavComponent ChildComponent="typeof(TreeItem)" href="" Match="NavLinkMatch.All">Introduction</NavComponent>
+    <NavComponent ChildComponent="typeof(TreeItem)" href="https://benjaminvertonghen.medium.com/blazor-fast-webcomponents-4bae55d005ad">Introduction</NavComponent>
     <NavComponent ChildComponent="typeof(TreeItem)" href="getting-started">Getting Started</NavComponent>
-    <TreeItem>
+    <TreeItem expanded>
         Basic Components
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/accordion">Accordion</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/anchor">Anchor</NavComponent>
@@ -40,6 +40,6 @@
 @code{
     private bool isProgressShown;
     private void ToggleProgress() => isProgressShown = !isProgressShown;
-    private bool areFormComponentsShown = true;
+    private bool areFormComponentsShown;
     private void ToggleFormComponents() => areFormComponentsShown = !areFormComponentsShown;
 }

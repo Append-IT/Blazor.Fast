@@ -1,0 +1,72 @@
+﻿@page "/getting-started"
+@page "/"
+<h1>Introducing Blazor.Fast</h1>
+<p>Blazor.Fast is a component library which wraps the Fast and Fluent web components, with the following design aspects in mind:</p>
+<ol>
+    <li>Keep the same API as the core library, without introducing a bunch of custom parameters or redundant work.</li>
+    <li>If you know how to use FAST in another framework, it doesn’t take a lot of time to learn how to use the Blazor wrapper.</li>
+    <li>The heavy lifting is done in the core FAST or Fluent library.</li>
+    <li>Abstracts away the theme so we can use Fluent and/or FAST by switching a JavaScript import and change the value of a switch.</li>
+</ol>
+
+
+<h1>Getting started</h1>
+
+<p>Turn your Blazor application into a Blazor<sup style="color:rgb(255, 67, 135)">FAST</sup> application by following the steps below or by reading the <Anchor href="https://benjaminvertonghen.medium.com/blazor-fast-webcomponents-4bae55d005ad" appearance="hypertext">blogpost</Anchor></p>
+
+<h3>Create a new Blazor application</h3>
+<fast-text-field appearance="filled" value="dotnet new blazorwasm -o WebApplication"></fast-text-field>
+
+<h3>Install the Nuget package</h3>
+<fast-text-field appearance="filled" value="Install-Package Append.Blazor.Fast"></fast-text-field>
+
+<h3>Add the Javascript file to the _host.cshtml (server-side) or index.html (client-side) page</h3>
+<p>For FAST</p>
+<fast-text-field appearance="filled" value="@((MarkupString)FastScript)"></fast-text-field>
+<p>For Fluent</p>
+<fast-text-field appearance="filled" value="@((MarkupString)FluentScript)"></fast-text-field>
+
+<h3>Add the required namespaces in the _imports.razor file</h3>
+<fast-text-area appearance="filled" value="@Namespaces"></fast-text-area>
+
+<h3>Adjust the App.razor file to the following</h3>
+<fast-text-area id="app-content-example" appearance="filled" rows="12" value="@AppContent"></fast-text-area>
+
+<h3>Use a component on the index.razor page</h3>
+<fast-text-field appearance="filled" value="@((MarkupString)ButtonExample)"></fast-text-field>
+
+<h3>Further reading</h3>
+<p>You can find all the implemented and supported components in the left navigation.</p>
+<br />
+<br />
+
+
+@functions {
+    const string FastScript = "<script type='module' src='https://unpkg.com/@microsoft/fast-components'></script>";
+    const string FluentScript = "<script type='module' src='https://unpkg.com/@fluentui/web-components'></script>";
+    const string Namespaces = "@using Append.Blazor.Fast.Components\n@using Append.Blazor.Fast.Core";
+    const string AppContent = "<SystemProvider Theme=\"new ThemeProvider(ThemeType.Fast)\" use-defaults> //Provide a Theme\n" +
+                                "\t<Router AppAssembly=\"@typeof(Program).Assembly\">\n" +
+                                    "\t\t<Found Context=\"routeData\">\n" +
+                                        "\t\t\t<RouteView RouteData=\"@routeData\" DefaultLayout=\"@typeof(MainLayout)\" />\n" +
+                                    "\t\t</Found>\n" +
+                                    "\t\t<NotFound>\n" +
+                                        "\t\t\t<LayoutView Layout=\"@typeof(MainLayout)\">\n" +
+                                            "\t\t\t\t<p>Sorry, there is nothing at this address.</p>\n" +
+                                        "\t\t\t</LayoutView>\n" +
+                                    "\t\t</NotFound>\n" +
+                                "\t</Router>\n" +
+                            "</SystemProvider>";
+    const string ButtonExample = "<Button appearance=\"primary\">Click Me</Button>";
+}
+
+<style>
+    fast-text-field, fast-text-area {
+        width: 100%;
+        padding-left: 3rem;
+    }
+
+    #app-content-example::part(control) {
+        height: 20em;
+    }
+</style>

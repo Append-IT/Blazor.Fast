@@ -1,0 +1,22 @@
+﻿@page "/components/treeview"
+<ComponentPage Component="typeof(Append.Blazor.Fast.Components.Treeview)">
+    <Information>
+        <h2 id="overview">Overview</h2>
+        <p>There are two components being presented as part of this specification - tree view, and tree view item. </p>
+        <p>As defined by the W3C:</p>
+        <blockquote>
+            <p>A tree view widget presents a hierarchical list. Any item in the hierarchy may have child items, and items that have children may be expanded or collapsed to show or hide the children. For example, in a file system navigator that uses a tree view to display folders and files, an item representing a folder can be expanded to reveal the contents of the folder, which may be files, folders, or both.</p>
+        </blockquote>
+        <h3 id="background">Background</h3>
+        <p>Currently, a react implementation exists which supports a <code>defaultExpanded</code> value which sets the default expanded or collapsed state. In the event that the <code>defaultExpanded</code> value is false, but there is a selected child the tree will expand automatically. <Anchor appearance="hypertext" href="https://github.com/microsoft/fast/issues/2597">Issue #2597</Anchor> requests an expanded prop to fully control the expanded/collapsed state.</p>
+        <h3 id="use-cases">Use Cases</h3>
+        <p>Primarily used to present a hierarchical list such as a file system. A tree view can also be served as a flat list.</p>
+        <h3 id="features">Features</h3>
+        <ul>
+            <li><strong>Selection:</strong> A tree view can support either single select or multi-select behavior for nodes. <em>*I would propose that for the initial spec we start with supporting single select only.</em></li>
+        </ul>
+        <ul>
+            <li><strong>Drag &amp; Drop support:</strong> Often, as is in the case of a &quot;file system&quot; example, drag and drop support is desired. This does present <Anchor appearance="hypertext" href="#drag-&amp;-drop">challenges</Anchor>.</li>
+        </ul>
+    </Information>
+</ComponentPage>

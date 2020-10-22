@@ -3,6 +3,13 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
+		<Authors>Benjamin Vertonghen</Authors>
+		<Company>Append</Company>
+		<Description>A tiny wrapper around Fast and Fluent Web Components to integrate with Blazor.</Description>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/Append-IT/Blazor.Fast</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Append-IT/Blazor.Fast</RepositoryUrl>
+		<PackageTags>Blazor, Fast, BlazorFast, Webcomponents</PackageTags>
 	</PropertyGroup>
 
 
@@ -15,6 +22,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="wwwroot\" />
+	  <None Include="..\..\LICENSE">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
 	</ItemGroup>
 </Project>

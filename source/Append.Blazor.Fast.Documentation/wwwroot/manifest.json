@@ -1,10 +1,10 @@
 {
-  "name": "Append.Blazor.Fast.Documentation",
-  "short_name": "Append.Blazor.Fast.Documentation",
+  "name": "Blazor Fast",
+  "short_name": "Blazor Fast",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#03173d",
+  "background_color": "#3B3B3B",
+  "theme_color": "#E1477E",
   "icons": [
     {
       "src": "icon-512.png",
