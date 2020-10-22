@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Append.Blazor.Fast", "sourc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Append.Blazor.Fast.Documentation", "source\Append.Blazor.Fast.Documentation\Append.Blazor.Fast.Documentation.csproj", "{9DBE8F41-0088-4326-9C85-1F02D6EBA08B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{139F6275-0788-4B62-AB95-8B4FDD431CFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Append.Blazor.Fast.Client", "samples\Append.Blazor.Fast.Client\Append.Blazor.Fast.Client.csproj", "{AA50811D-89D9-4609-AD0E-05A610E8B82F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{9DBE8F41-0088-4326-9C85-1F02D6EBA08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DBE8F41-0088-4326-9C85-1F02D6EBA08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DBE8F41-0088-4326-9C85-1F02D6EBA08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA50811D-89D9-4609-AD0E-05A610E8B82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA50811D-89D9-4609-AD0E-05A610E8B82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA50811D-89D9-4609-AD0E-05A610E8B82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA50811D-89D9-4609-AD0E-05A610E8B82F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{79F34DEE-C214-4544-A44D-E8D82F54BE11} = {4F96181B-74FB-48D4-BD50-EE5C84FD0A5D}
 		{9DBE8F41-0088-4326-9C85-1F02D6EBA08B} = {4F96181B-74FB-48D4-BD50-EE5C84FD0A5D}
+		{AA50811D-89D9-4609-AD0E-05A610E8B82F} = {139F6275-0788-4B62-AB95-8B4FDD431CFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF88F018-BC50-442A-9BE1-06EC5264796B}
