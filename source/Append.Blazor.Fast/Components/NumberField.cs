@@ -49,7 +49,7 @@ namespace Append.Blazor.Fast.Components
             builder.AddAttribute(3, "type", "number");
             builder.AddAttribute(4, "class", CssClass);
             builder.AddAttribute(5, "value", BindConverter.FormatValue(CurrentValueAsString));
-            builder.AddAttribute(6, "onchange", EventCallback.Factory.CreateBinder<string?>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
+            builder.AddAttribute(6, "oninput", EventCallback.Factory.CreateBinder<string?>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
             builder.CloseElement();
         }
 

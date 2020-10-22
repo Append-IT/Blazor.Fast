@@ -18,7 +18,7 @@ namespace Append.Blazor.Fast.Components
             builder.AddMultipleAttributes(1, AdditionalAttributes);
             builder.AddAttribute(3, "class", CssClass);
             builder.AddAttribute(4, "value", BindConverter.FormatValue(CurrentValue));
-            builder.AddAttribute(5, "onchange", EventCallback.Factory.CreateBinder<string?>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
+            builder.AddAttribute(5, "oninput", EventCallback.Factory.CreateBinder<string?>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
             builder.AddContent(6, ChildContent);
             builder.CloseElement();
         }
