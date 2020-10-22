@@ -1,0 +1,18 @@
+﻿<ExampleHeader Component="typeof(TextField)" Example="@GetType()" />
+
+<EditForm Model="model" OnValidSubmit="HandleValidSubmit">
+    <TextField @bind-Value="model.Text">Label</TextField>
+</EditForm>
+<p>The current value is: @model.Text</p>
+
+@code{
+    private EditModel model = new EditModel();
+    public class EditModel
+    {
+        public string Text { get; set; }
+    }
+    private void HandleValidSubmit()
+    {
+        Console.WriteLine($"Value of the model is: {model.Text}");
+    }
+}
