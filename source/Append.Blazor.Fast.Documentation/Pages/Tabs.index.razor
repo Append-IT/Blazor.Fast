@@ -2,16 +2,24 @@
 <ComponentPage Component="typeof(Append.Blazor.Fast.Components.Tabs)">
     <Information>
         <h2 id="overview">Overview</h2>
-        <p><em>Switch</em> mimics a physical switch that can be turned <strong>on</strong> or <strong>off</strong>.</p>
+        <p><em>Tabs</em> are a set of layered sections of content that display one panel of content at a time. Each tab panel has an associated tab element, that when activated, displays the panel. The list of tab elements is arranged along one edge of the currently displayed panel.</p>
         <h3 id="use-cases">Use Cases</h3>
-        <p>Typical use cases include, but are not limited to, turning a feature on and off or showing or hiding a piece of UI</p>
-        <h3 id="features">Features</h3>
-        <p>A switch should allow the following properties:</p>
         <ul>
-            <li><code>checked</code>, whether the switch is checked or not.</li>
-            <li><code>checked-message</code>, the message that displays when the switch is checked.</li>
-            <li><code>unchecked-message</code>, the message that displays when switch is not checked.</li>
-            <li><code>disabled</code>, whether the switch is disabled or not.</li>
+            <li>
+                <p>Steve is researching for an upcoming vacation for him and his family. He opens his web browser and opens a new tab to make a rental car reservation and another for his flight information. Steve can quickly switch back and fourth between tabs to get the information he needs for the rental car reservation.</p>
+            </li>
+            <li>
+                <p>Monika visits a website to learn how to fix her leaky sink. The website displays a vertical tab interface with each step. Monika can jump ahead steps or go back to previous steps by selecting various tabs.</p>
+            </li>
         </ul>
+        <h3 id="features">Features</h3>
+        <ul>
+            <li><strong>Orientation:</strong> Allows the tab list to be oriented horizontally above the tab content or vertically to the left or right (depending on language region) of the tab content.</li>
+            <li><strong>Supplemental content:</strong> Offers a way to add content via start and end to the left and/or right (depending on language region) of the the tab list.</li>
+            <li><strong>ActiveIndicator:</strong> Offers a way to add or remove an active indicator that highlights the currently active tab and animates to the next active tab. Defaults to true.</li>
+            <li><strong>ActiveTab:</strong> Provides a reference to the currently active tab vis the <code>change</code> event.</li>
+            <li><strong>ActiveId:</strong> Provides a way to set the active tab.</li>
+        </ul>
+
     </Information>
 </ComponentPage>
