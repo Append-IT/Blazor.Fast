@@ -47,7 +47,7 @@ You can install from NuGet using the following command:
 
 3. Adjust the `App.razor` file to the following, to provide a highest level ThemeProvider.
 ```razor
-<SystemProvider Theme="new ThemeProvider(ThemeType.Fast)" use-defaults> //Provide a Theme Fluent or Fast
+<SystemProvider Theme="new ThemeProvider(ThemeType.Fast)" use-defaults>
  <Router AppAssembly="@typeof(Program).Assembly">
   <Found Context="routeData">
    <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
