@@ -21,9 +21,10 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-
-    <script src="_framework/blazor.webassembly.js"></script>
+    <!-- Loading fast first -->
     <script type="module" src="https://unpkg.com/@microsoft/fast-components"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <!-- This can be done later since we don't use it directly -->
     <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
 </body>
 
