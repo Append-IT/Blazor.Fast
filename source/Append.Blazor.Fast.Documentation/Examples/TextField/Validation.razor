@@ -1,0 +1,41 @@
+﻿@using System.ComponentModel.DataAnnotations
+
+<ExampleHeader Component="typeof(TextField)" Example="@GetType()" />
+<p>Note that the validation uses the default css and can easiliy be customized.</p>
+<EditForm Model="model" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <p>
+        <TextField @bind-Value="model.Firstname">Firstname</TextField>
+    </p>
+    <p>
+        <TextField @bind-Value="model.Lastname">Firstname</TextField>
+    </p>
+    <p>Firstname: @model.Firstname</p>
+    <p>Lastname: @model.Lastname</p>
+    <Button type="submit">Submit</Button>
+</EditForm>
+<Dialog hidden=@(!isShowingDialog ? "true" : null)>
+    <div style="padding: 0 10px 10px; color: var(--neutral-foreground-rest)">
+        <h2>You submitted the form with the following contents:</h2>
+        <p>Firstname: @model.Firstname</p>
+        <p>Lastname: @model.Lastname</p>
+        <Button @onclick="CloseDialog">Close</Button>
+    </div>
+</Dialog>
+
+@code{
+    private bool isShowingDialog = false;
+    private EditModel model = new EditModel();
+    public class EditModel
+    {
+        [Required]
+        [StringLength(10, ErrorMessage = "Firstname is too long.")]
+        public string Firstname { get; set; }
+        [Required]
+        [StringLength(10, ErrorMessage = "Lastname is too long.")]
+        public string Lastname { get; set; }
+    }
+    private void Submit() => isShowingDialog = true;
+    private void CloseDialog() => isShowingDialog = false;
+}
