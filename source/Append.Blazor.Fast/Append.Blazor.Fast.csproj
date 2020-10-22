@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
@@ -10,6 +10,7 @@
 		<PackageProjectUrl>https://github.com/Append-IT/Blazor.Fast</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/Append-IT/Blazor.Fast</RepositoryUrl>
 		<PackageTags>Blazor, Fast, BlazorFast, Webcomponents</PackageTags>
+		<Version>1.0.1</Version>
 	</PropertyGroup>
 
 
