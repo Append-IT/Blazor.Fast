@@ -45,7 +45,7 @@
     const string FastScript = "<script type='module' src='https://unpkg.com/@microsoft/fast-components'></script>";
     const string FluentScript = "<script type='module' src='https://unpkg.com/@fluentui/web-components'></script>";
     const string Namespaces = "@using Append.Blazor.Fast.Components\n@using Append.Blazor.Fast.Core";
-    const string AppContent = "<SystemProvider Theme=\"new ThemeProvider(ThemeType.Fast)\" use-defaults> //Provide a Theme\n" +
+    const string AppContent = "<SystemProvider Theme=\"new ThemeProvider(ThemeType.Fast)\" use-defaults>\n" +
                                 "\t<Router AppAssembly=\"@typeof(Program).Assembly\">\n" +
                                     "\t\t<Found Context=\"routeData\">\n" +
                                         "\t\t\t<RouteView RouteData=\"@routeData\" DefaultLayout=\"@typeof(MainLayout)\" />\n" +
