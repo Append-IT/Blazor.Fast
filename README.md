@@ -15,7 +15,7 @@ Blazor.Fast is a component library which wraps the [Fast](https://www.fast.desig
 You can read more about why and how we did this in [this blog post](https://benjaminvertonghen.medium.com/blazor-fast-webcomponents-4bae55d005ad).
 
 ### Documentation and examples
-- The documentation and examples of Blazor.Fast can be found [here](https://tinyurl.com/yxjuzolo)
+- The documentation and examples of Blazor.Fast can be found [here](https://blazorfast.append.be/getting-started)
 - The official documentation of FAST by Microsoft can be found [here](https://www.fast.design/docs/introduction/)
 
 ### Installing
