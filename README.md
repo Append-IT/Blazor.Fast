@@ -5,7 +5,7 @@ Blazor.Fast is a component library which wraps the [Fast](https://www.fast.desig
 1. Keep the same API as the core library, without introducing a bunch of custom parameters or redundant work.
 2. If you know how to use FAST in another framework, it doesn’t take a lot of time to learn how to use the (very tiny) Blazor wrapper.
 3. The heavy lifting is done in the core FAST or Fluent library.
-4. Abstracts away the theme so we can use Fluent and/or FAST by switching a JavaScript import and change the value of a switch.
+4. Abstracts away the theme so we can use Fluent and/or FAST by changing the value of a switch.
 5. Make it easier for Blazor developers to integrate FAST or Fluent in their projects.
 
 ![Nuget](https://img.shields.io/nuget/v/append.blazor.fast?style=flat-square)
