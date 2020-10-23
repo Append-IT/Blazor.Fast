@@ -1,0 +1,29 @@
+﻿<ExampleHeader Component="typeof(Dialog)" Example="@GetType()" />
+<Button @onclick="ToggleDialog">Click to show the dialog</Button>
+<Dialog hidden=@(!isShowingDialog ? "true" : null) class="dialog-left">
+    <div style="padding: 0 10px 10px; color: var(--neutral-foreground-rest)">
+        <h2>Dialog with text and a button.</h2>
+        <Button  @onclick="ToggleDialog">Click to hide the dialog</Button>
+    </div>
+</Dialog>
+
+@code{
+    bool isShowingDialog;
+
+    private void ToggleDialog()
+    {
+        isShowingDialog = !isShowingDialog;
+        StateHasChanged();
+    }
+}
+
+<style>
+    .dialog-left::part(control) {
+        height: 100vh;
+        width: 400px;
+        left: 0;
+        top:0;
+        position:fixed;
+        overflow-y:auto;
+    }
+</style>
