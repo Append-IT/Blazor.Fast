@@ -1,5 +1,4 @@
 # Blazor.Fast
-A **tiny** wrapper around  Web Components to integrate with Blazor.
 
 Blazor.Fast is a component library which wraps the [Fast](https://www.fast.design/) and [Fluent](https://github.com/microsoft/fluentui/tree/master/packages/web-components) web components, with the following design aspects in mind:
 
