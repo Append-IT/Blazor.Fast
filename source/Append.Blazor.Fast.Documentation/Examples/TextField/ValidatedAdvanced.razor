@@ -1,15 +1,26 @@
 ﻿@using System.ComponentModel.DataAnnotations
 
 <ExampleHeader Component="typeof(TextField)" Example="@GetType()" />
-<p>Note that the validation uses the default css and can easiliy be customized.</p>
 <EditForm Model="model" OnValidSubmit="Submit">
     <DataAnnotationsValidator />
     <ValidationSummary />
     <p>
-        <TextField @bind-Value="model.Firstname">Firstname</TextField>
+        <TextField @bind-Value="model.Firstname">Firstname*</TextField>
     </p>
     <p>
-        <TextField @bind-Value="model.Lastname">Lastname</TextField>
+        <TextField @bind-Value="model.Lastname">Lastname*</TextField>
+    </p>
+    <p>
+        <TextField type="tel" @bind-Value="model.Telephone">Phone</TextField>
+    </p>
+    <p>
+        <TextField type="email" @bind-Value="model.Email">Email Address*</TextField>
+    </p>
+    <p>
+        <DateField @bind-Value="model.Birthday">Date of birth</DateField>
+    </p>
+    <p>
+        <NumberField @bind-Value="model.AmountOfChildren">Amount of kids</NumberField>
     </p>
     <Button type="submit">Submit</Button>
 </EditForm>
@@ -18,6 +29,10 @@
         <h2>You submitted the form with the following contents:</h2>
         <p>Firstname: @model.Firstname</p>
         <p>Lastname: @model.Lastname</p>
+        <p>Telephone: @model.Telephone</p>
+        <p>Email: @model.Email</p>
+        <p>Date of birth: @model.Birthday</p>
+        <p>Kids: @model.AmountOfChildren</p>
         <Button @onclick="CloseDialog">Close</Button>
     </div>
 </Dialog>
@@ -33,6 +48,12 @@
         [Required]
         [StringLength(10, ErrorMessage = "Lastname is too long.")]
         public string Lastname { get; set; }
+        public string Telephone { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+        public DateTime Birthday { get; set; }
+        public int AmountOfChildren { get; set; }
     }
     private void Submit() => isShowingDialog = true;
     private void CloseDialog() => isShowingDialog = false;
