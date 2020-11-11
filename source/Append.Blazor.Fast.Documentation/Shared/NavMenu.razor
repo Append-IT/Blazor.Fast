@@ -2,7 +2,7 @@
 <Treeview>
     <NavComponent ChildComponent="typeof(TreeItem)" href="https://benjaminvertonghen.medium.com/blazor-fast-webcomponents-4bae55d005ad">Introduction</NavComponent>
     <NavComponent ChildComponent="typeof(TreeItem)" href="getting-started">Getting Started</NavComponent>
-    <TreeItem expanded>
+    <TreeItem @onclick="ToggleBasicComponents" expanded=@(areBasicComponentsShown ? "true" : null)>
         Basic Components
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/accordion">Accordion</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/anchor">Anchor</NavComponent>
@@ -13,11 +13,8 @@
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/divider">Divider</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/flipper">Flipper</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/menu">Menu</NavComponent>
-        <TreeItem @onclick="ToggleProgress" expanded=@(isProgressShown ? "true" : null)>
-            Progress
-            <NavComponent ChildComponent="typeof(TreeItem)" href="components/progress-ring" Match="NavLinkMatch.All">Ring</NavComponent>
-            <NavComponent ChildComponent="typeof(TreeItem)" href="components/progress" Match="NavLinkMatch.All">Linear</NavComponent>
-        </TreeItem>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/progress-ring" Match="NavLinkMatch.All">Progress Ring</NavComponent>
+        <NavComponent ChildComponent="typeof(TreeItem)" href="components/progress" Match="NavLinkMatch.All">Progress Linear</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/skeleton">Skeleton</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/tabs">Tabs</NavComponent>
         <NavComponent ChildComponent="typeof(TreeItem)" href="components/tooltip">Tooltip</NavComponent>
@@ -38,8 +35,8 @@
 </Treeview>
 
 @code{
-    private bool isProgressShown;
-    private void ToggleProgress() => isProgressShown = !isProgressShown;
     private bool areFormComponentsShown;
     private void ToggleFormComponents() => areFormComponentsShown = !areFormComponentsShown;
+    private bool areBasicComponentsShown;
+    private void ToggleBasicComponents() => areBasicComponentsShown = !areBasicComponentsShown;
 }
