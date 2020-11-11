@@ -7,14 +7,20 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.0" />
+    <PackageReference Include="MonacoRazor" Version="1.0.0-20201105.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.0" PrivateAssets="all" />
     <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Append.Blazor.Fast\Append.Blazor.Fast.csproj" />
-
   </ItemGroup>
+
+  <Target Name="WatchScopedCss" BeforeTargets="GenerateWatchList">
+    <ItemGroup>
+      <Watch Include="**\*.razor.css" />
+    </ItemGroup>
+  </Target>
 
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
